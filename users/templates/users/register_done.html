@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Пользователь успешно зарегистрирован!</h1>
+
+<p>Теперь необходимо авторизоваться по <a href="{% url 'users:login' %}">ссылке</a></p>
+{% endblock %}

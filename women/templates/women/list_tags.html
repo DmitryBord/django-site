@@ -1,0 +1,12 @@
+{% if tags %}
+  <p>Теги:</p>
+  <ul class="tags-list">
+    {% for t in tags %}
+      {% if t.id == tag_selected %}
+        <li class="tag_selected">{{t.name}}</li>
+      {% else %}
+        <li><a href="{{ t.get_absolute_url }}">{{ t.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
